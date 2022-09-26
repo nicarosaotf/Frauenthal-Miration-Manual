@@ -12,6 +12,7 @@ class Server {
         this.eventsPath = '/events';
         this.etixPath = '/etix';
         this.contactsPath = '/contacts';
+        this.listsPath = '/lists';
 
         this.middlewares();
 
@@ -30,6 +31,7 @@ class Server {
         this.app.use(this.ticketsPath, require('../routes/tickets'));
         this.app.use(this.eventsPath, require('../routes/events'));
         this.app.use(this.contactsPath, require('../routes/contacts'));
+        this.app.use(this.listsPath, require('../routes/lists'));
     };
 
     listen(){

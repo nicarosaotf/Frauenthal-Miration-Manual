@@ -5,7 +5,7 @@ const AUTHENTICATION_URL = process.env.AUTHENTICATION_URL;
 const REFRESH_TOKEN = process.env.REFRESH_TOKEN;
 const ETIX_API_KEY = process.env.ETIX_API_KEY;
 
-let authToken = 'aW2ZYbUZbWWaZbe1UXcWUcdf3VccaUcY2eV3a1Z0XUXaU2VcZedXc1ZZX00cYYVf';
+let authToken = 'eV2Z0ec0aXdY0ZdVfZUWYcWXbYX1dYZ0U3VXe12Zd3e0fVYdcY2aZYV0eZab3Y31';
 
 const authorize = async(req,res) => {
 

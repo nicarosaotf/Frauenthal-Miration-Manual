@@ -6,7 +6,7 @@ const {authToken} = require('./etix.controller');
 const {getEvents} = require('./events.controller');
 
 const API_URL = process.env.API_URL;
-const DATE_TO_CHECK = '2022-09-15T15:00:00.000Z';
+const DATE_TO_CHECK = '2022-09-23T06:00:00.000Z';
 
 const getTicketsFromEvent = async(event) => {
     try {
@@ -129,7 +129,9 @@ const getTicketList = async(req,res) => {
                 temp.dateTime = event.datetimeISO8601;
                 temp.contactNumber = contactNumber;
 
-                contactList.push(temp);
+                if(event.performanceName === "Beatles vs Stones: A Musical Showdown"){
+                    contactList.push(temp);
+                } 
             };
         };
 
@@ -172,7 +174,7 @@ const getTicketsToMigrate = async(req, res) => {
         let tempList = [];
         let contactList = [];
 
-        console.log('Starting Check');
+        console.log('Starting Check...');
 
         for(const event of events){
 
